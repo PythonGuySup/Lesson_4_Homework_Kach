@@ -1,7 +1,5 @@
 package ru.itis.users.repositories;
 
-import ru.itis.users.validators.UserValidator;
-import ru.itis.users.exceptions.InvalidEmailOrPasswordException;
 import ru.itis.users.exceptions.EntityNotFoundException;
 import ru.itis.users.models.User;
 
@@ -16,23 +14,18 @@ import java.util.Optional;
  * @author Marsel Sidikov (AIT TR)
  */
 public class UsersRepository {
-    private static final UserValidator userValidator = new UserValidator();
     private final Map<String, User> users;
 
     public UsersRepository() {
         this.users = new HashMap<>();
     }
 
-    public void save(User user) throws NullPointerException, InvalidEmailOrPasswordException {
+    public void save(User user) throws NullPointerException {
         if (user == null) {
-            throw new NullPointerException();
+            throw new NullPointerException("user is null");
         }
 
-        if (userValidator.validate(user)) {
-            this.users.put(user.getUuid(), user); // practically unlimited pairs (2^31 - 1)
-        } else {
-            throw new InvalidEmailOrPasswordException("Invalid Email or Password");
-        }
+       this.users.put(user.getUuid(), user);
     }
 
     public void delete(User user) throws EntityNotFoundException {
