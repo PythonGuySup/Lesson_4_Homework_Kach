@@ -16,7 +16,6 @@ import java.util.Optional;
  * @author Marsel Sidikov (AIT TR)
  */
 public class UsersRepository {
-    private static final int MAX_USERS_COUNT = 10;
     private static final UserValidator userValidator = new UserValidator();
     private final Map<String, User> users;
 
