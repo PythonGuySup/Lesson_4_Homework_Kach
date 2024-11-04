@@ -27,11 +27,23 @@ public class UsersController {
     }
 
     public void run() {
+        try {
+            while (true) {
+                printMainMenu();
+                processCommandFromMainMenu();
+            }
+        } catch (Exception e) {
+            System.out.println("Внутрення ошибка");
+            System.out.println("Вывести трассу ошибки? Y/n");
+            scanner.nextLine();
+            String command = scanner.nextLine().toLowerCase();
 
-        while (true) {
-            printMainMenu();
-
-            processCommandFromMainMenu();
+            if (command.equals("y")) {
+                e.printStackTrace();
+            } else if (command.equals("n")) {
+                System.out.println("Аварийная остановка сервиса...");
+                System.exit(1);
+            }
         }
     }
 
