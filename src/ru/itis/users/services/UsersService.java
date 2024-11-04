@@ -67,4 +67,5 @@ public class UsersService {
     public User[] getUsers() {
         return repository.getUsers();
     }
+
 }

@@ -100,8 +100,6 @@ public class UsersController {
             System.out.println("Неправильный формат пароля или email. Пожалуйста, повторите ввод снова");
         } catch (NotSuchUserWithEmailException e) {
             System.out.println("Пользователя с таким email не найден в репозитории");
-        } catch (EntityNotFoundException e) {
-            System.out.println("Внутрення ошибка сервера");
         }
 
     }
