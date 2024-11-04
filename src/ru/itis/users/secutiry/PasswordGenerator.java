@@ -8,7 +8,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
-import java.util.Arrays;
+import java.util.Base64;
 
 public class PasswordGenerator {
     private byte[] salt;
@@ -47,7 +47,7 @@ public class PasswordGenerator {
         SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
         byte[] hashedPassword = factory.generateSecret(spec).getEncoded();
 
-        return Arrays.toString(hashedPassword);
+        return Base64.getEncoder().encodeToString(hashedPassword);
     }
 
 
