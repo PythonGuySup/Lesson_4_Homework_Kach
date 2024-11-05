@@ -4,4 +4,12 @@
 - Added exception handling
 - Added validation of email & password in service layer
 - Added password salting
-  
+- Added Spring style repositories via Inheritance, Abstract classes and Interfaces, Generics
+
+## ToDo
+- Catch User collisions (when they have same password || email)
+- Implement Auth service
+
+## BugFixes
+- Removed public access modifier in interface method
+- Getter/Setter moved up as code conventions says.
