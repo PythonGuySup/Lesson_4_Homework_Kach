@@ -3,8 +3,6 @@ package ru.itis.users.repositories;
 import ru.itis.users.models.Salt;
 import ru.itis.users.models.User;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 
