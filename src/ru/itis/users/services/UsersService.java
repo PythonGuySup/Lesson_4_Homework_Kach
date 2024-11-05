@@ -10,7 +10,7 @@ import ru.itis.users.repositories.UsersRepository;
 import ru.itis.users.repositories.SaltRepository;
 import ru.itis.users.secutiry.PasswordGenerator;
 import ru.itis.users.validators.UserValidator;
-import ru.itis.users.validators.Validator;
+import ru.itis.users.validators.ValidatorInterface;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -24,7 +24,7 @@ public class UsersService {
 
     private final UsersRepository repository;
     private final SaltRepository saltRepository;
-    private final Validator<User> validator;
+    private final ValidatorInterface<User> validator;
     private final PasswordGenerator passwordGenerator;
 
     public UsersService() {

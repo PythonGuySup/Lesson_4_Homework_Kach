@@ -2,7 +2,7 @@ package ru.itis.users.validators;
 
 import ru.itis.users.models.User;
 
-public class UserValidator implements Validator<User> {
+public class UserValidator implements ValidatorInterface<User> {
     @Override
     public boolean validate(User toValidate) throws NullPointerException {
         if (toValidate == null) {
