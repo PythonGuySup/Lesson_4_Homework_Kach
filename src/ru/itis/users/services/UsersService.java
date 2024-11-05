@@ -33,7 +33,6 @@ public class UsersService {
         this.validator = new UserValidator();
         this.passwordGenerator = new PasswordGenerator();
 
-
         byte[] salt = PasswordGenerator.generateSalt();
         Salt saltDTO = new Salt(UUID.randomUUID().toString(), salt);
         passwordGenerator.setSalt(salt);
