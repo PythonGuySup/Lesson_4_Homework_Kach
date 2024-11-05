@@ -1,5 +1,7 @@
 package ru.itis.users.models;
 
 public interface Entity<IdType>  {
-    public IdType getId();;
+    IdType getId();
+    @Override
+    String toString();
 }
