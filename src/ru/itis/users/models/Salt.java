@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Salt {
+public class Salt implements Entity<String>{
 
     private final String uuid;
 
@@ -15,7 +15,7 @@ public class Salt {
         this.salt = salt;
     }
 
-    public String getUuid() { return uuid; }
+    public String getId() { return uuid; }
 
     public byte[] getSalt() { return salt; }
 

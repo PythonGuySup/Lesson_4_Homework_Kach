@@ -5,7 +5,7 @@ package ru.itis.users.models;
  *
  * @author Marsel Sidikov (AIT TR)
  */
-public class User {
+public class User implements Entity<String> {
 
     private final String uuid;
 
@@ -19,7 +19,7 @@ public class User {
         this.password = password;
     }
 
-    public String getUuid() {
+    public String getId() {
         return uuid;
     }
 

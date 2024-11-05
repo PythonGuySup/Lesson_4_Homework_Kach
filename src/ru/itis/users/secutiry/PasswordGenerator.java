@@ -14,6 +14,14 @@ public class PasswordGenerator {
 
     private byte[] salt;
 
+    public void setSalt(byte[] salt) {
+        this.salt = salt;
+    }
+
+    public byte[] getSalt() {
+        return salt;
+    }
+
     // PBKDF2 hashing algorithm
     public String generateSaltedPassword(String rawPassword) throws NullPointerException, InternalPasswordGeneratorException {
         if (salt == null | rawPassword == null) {
@@ -42,14 +50,5 @@ public class PasswordGenerator {
 
         return Base64.getEncoder().encodeToString(hashedPassword);
     }
-
-    public void setSalt(byte[] salt) {
-        this.salt = salt;
-    }
-
-    public byte[] getSalt() {
-        return salt;
-    }
-
 
 }
