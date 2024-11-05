@@ -8,7 +8,8 @@
 
 ## ToDo
 - Catch User collisions (when they have same password || email)
-- Implement Auth service
+- Implement AuthService
+- Implement NotificationService
 
 ## BugFixes
 - Removed public access modifier in interface method
