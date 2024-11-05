@@ -10,6 +10,7 @@
 - Catch User collisions (when they have same password || email)
 - Implement AuthService
 - Implement NotificationService
+- Implement Context as Collection of Instances
 
 ## BugFixes
 - Removed public access modifier in interface method
