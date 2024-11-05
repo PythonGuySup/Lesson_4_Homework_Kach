@@ -15,8 +15,6 @@ import java.util.Optional;
  */
 public class UsersRepository extends RepositoryImp<User, String> {
 
-    public UsersRepository() { super(); }
-
     public Optional<User> findUserByEmail(String email) {
         for (User user : super.findAll()) {
             if (user.getEmail().equals(email)) {
