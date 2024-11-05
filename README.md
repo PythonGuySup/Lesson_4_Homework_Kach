@@ -19,4 +19,3 @@
 ## Ideas
 - Implement Generic StOut Stream class (for managing what and when is send to output)
 - Rewrite all find methods in repositories to Optional<?> for better handling null result
--
